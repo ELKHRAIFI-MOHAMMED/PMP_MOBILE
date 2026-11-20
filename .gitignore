@@ -39,3 +39,9 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Local app settings and generated build verification
+.expo-export-check/
+.env
+.env.*
+!.env.example
