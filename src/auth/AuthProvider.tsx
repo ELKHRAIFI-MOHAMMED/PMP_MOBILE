@@ -21,6 +21,8 @@ type AuthValue = {
   signIn: (email: string, password: string) => Promise<void>;
   register: (payload: Record<string, string>) => Promise<void>;
   signOut: () => Promise<void>;
+  /** Forget the local session without calling the API (e.g. after the account was deleted). */
+  clearSession: () => Promise<void>;
   reloadUser: () => Promise<void>;
 };
 
@@ -54,6 +56,11 @@ export function AuthProvider({ children }: React.PropsWithChildren) {
     }
   }, []);
 
+  const clearSession = useCallback(async () => {
+    await removeToken();
+    setUser(null);
+  }, []);
+
   useEffect(() => {
     let active = true;
     const expired = DeviceEventEmitter.addListener('mobile:session-expired', () => setUser(null));
@@ -66,8 +73,8 @@ export function AuthProvider({ children }: React.PropsWithChildren) {
     return () => { active = false; expired.remove(); };
   }, [reloadUser]);
 
-  const value = useMemo(() => ({ user, loading, signedIn: Boolean(user), signIn, register, signOut, reloadUser }),
-    [user, loading, signIn, register, signOut, reloadUser]);
+  const value = useMemo(() => ({ user, loading, signedIn: Boolean(user), signIn, register, signOut, clearSession, reloadUser }),
+    [user, loading, signIn, register, signOut, clearSession, reloadUser]);
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 

@@ -1,9 +1,21 @@
 import { create, isAxiosError, type AxiosError } from 'axios';
 import { DeviceEventEmitter, Platform } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
+import Constants from 'expo-constants';
+
+/**
+ * In development, the API is assumed to run on the same machine as the Expo dev server:
+ * the phone reached Metro at hostUri ("192.168.x.y:8081"), so the API is at that host on port 8000.
+ * This survives Wi-Fi IP changes. EXPO_PUBLIC_API_URL always wins (staging / production builds).
+ */
+function devApiUrl() {
+  const host = Constants.expoConfig?.hostUri?.split(':')[0];
+  const port = process.env.EXPO_PUBLIC_API_PORT || '8000';
+  return `http://${host || '127.0.0.1'}:${port}/api/v1`;
+}
 
 const configuredUrl = process.env.EXPO_PUBLIC_API_URL?.trim();
-export const API_BASE_URL = (configuredUrl || (__DEV__ ? 'http://127.0.0.1:8000/api/v1' : '')).replace(/\/$/, '');
+export const API_BASE_URL = (configuredUrl || (__DEV__ ? devApiUrl() : '')).replace(/\/$/, '');
 const TOKEN_KEY = 'marches-publics.auth-token';
 let accessToken: string | null = null;
 
