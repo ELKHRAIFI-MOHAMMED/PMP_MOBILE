@@ -45,3 +45,6 @@ yarn-error.*
 .env
 .env.*
 !.env.example
+
+# Local AI assistant settings
+.claude/
