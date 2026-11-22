@@ -1,6 +1,7 @@
 {
   "name": "marches-publics-mobile",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "main": "expo-router/entry",
   "dependencies": {
     "@expo-google-fonts/public-sans": "^0.4.2",

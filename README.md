@@ -122,6 +122,10 @@ npm run lint
 npx expo-doctor
 ```
 
+## Licence
+
+Code publié à titre de démonstration (portfolio). **Tous droits réservés** : la consultation est libre, mais toute copie, modification ou réutilisation nécessite une autorisation écrite. Voir [LICENSE](LICENSE).
+
 ---
 
 Projet réalisé en freelance. Pour un projet similaire — application mobile, refonte d’interface ou produit SaaS —, contactez-moi via mon profil GitHub.
