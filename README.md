@@ -1,131 +1,79 @@
-# TrueAi Marchés — application mobile
+# Marchés publics — application mobile
 
-**L’application mobile qui aide les entreprises marocaines à répondre aux appels d’offres publics : suivre les dates de dépôt, comprendre le dossier de consultation, préparer la candidature et estimer le bon prix.**
+Application mobile iOS et Android conçue pour accompagner les entreprises marocaines dans leur suivi des marchés publics et la préparation de leurs candidatures. Elle réunit les informations et les actions utiles dans une interface pensée pour un usage quotidien, au bureau comme en déplacement.
 
-![Aperçu de l’application : connexion, écran du jour, fiche d’un marché et liste des marchés en mode sombre](docs/screenshots/banniere.png)
+## Parcours dans l’application
 
-> Application iOS et Android réalisée en freelance pour une plateforme SaaS de veille et de réponse aux marchés publics. Ce dépôt présente l’application mobile ; la plateforme serveur et les données du client restent privées.
+| Espace | Utilisation |
+| --- | --- |
+| **Aujourd’hui** | Repérer les prochaines échéances, les dossiers en cours et les actions à traiter. Les repères de date rendent l’urgence visible d’un coup d’œil. |
+| **Marchés** | Parcourir et rechercher les consultations, appliquer des filtres, retrouver les favoris et ouvrir la fiche détaillée d’un marché. |
+| **Fiche du marché** | Consulter les informations principales, accéder à l’analyse du dossier de consultation et examiner les éléments de prix disponibles. |
+| **Analyse assistée par IA** | Explorer les points importants du dossier et poser des questions sur ses documents pour mieux comprendre les exigences de la consultation. |
+| **Dossiers de candidature** | Suivre les candidatures, consulter les pièces demandées, ajouter des documents et visualiser l’avancement de la préparation. |
+| **Estimation des prix** | Consulter les estimations et les éléments de prix associés pour éclairer la préparation d’une offre. |
+| **Statistiques et activité** | Suivre les indicateurs et rapports d’activité, les finances, les quotas de l’abonnement et les informations de conformité. |
+| **Compte et préférences** | Retrouver les informations de l’entreprise, les notifications, les options de compte et la gestion de l’abonnement. |
 
----
+## Aperçu des interfaces
 
-## Le problème
-
-Répondre à un marché public est une course contre la montre. Une PME doit repérer la consultation, télécharger le dossier de consultation (DCE), lire des dizaines de pages pour savoir quelles pièces fournir, rassembler ses attestations à jour, chiffrer son offre… et déposer avant une date limite qui ne pardonne pas.
-
-Ces étapes se font souvent loin du bureau. Le dirigeant ou le chargé d’affaires a besoin de savoir **ce qui arrive à échéance**, **ce qui manque encore** et **à quel prix se positionner**, depuis son téléphone.
-
-## Le concept
-
-L’application mobile est le compagnon de poche de la plateforme web. Elle est construite autour d’une idée simple : **la date de dépôt est l’information la plus importante d’un marché**.
-
-Chaque marché affiche un **tampon d’échéance** — `J-12`, `Auj.`, `Clos` — inspiré des tampons administratifs. Sa couleur indique l’urgence (bientôt, urgent, clos), toujours accompagnée d’un libellé pour rester lisible par tous. C’est l’élément signature de l’interface : on comprend sa journée en un coup d’œil.
-
-## Ce que fait l’application
-
-| Besoin de l’entreprise | Ce que propose l’application |
-|---|---|
-| **Ne rater aucune échéance** | Écran « Aujourd’hui » avec les prochaines dates de dépôt, compte à rebours sur chaque marché, notifications |
-| **Trouver un marché** | Recherche par objet, référence, acheteur ou lieu ; filtres (ouverts, travaux, fournitures, services, favoris) ; ajout d’une consultation depuis le portail officiel par sa référence ou son lien |
-| **Comprendre le dossier** | Fiche du marché claire, analyse assistée par IA du dossier de consultation (avec consentement explicite), assistant qui répond aux questions en **citant mot pour mot** les documents |
-| **Préparer la candidature** | Liste des pièces exigées avec leur source dans le DCE, ajout de documents depuis le téléphone, suivi de l’avancement, préparation de brouillons à relire |
-| **Bien chiffrer** | Prix de référence indicatif, niveau de fiabilité, offres publiées après ouverture des plis, lignes du bordereau des prix |
-| **Piloter l’activité** | Indicateurs clés, graphique d’activité, rapport (7 jours à tout l’historique), finances, quotas d’abonnement, score de conformité des attestations, cautions, devis et factures |
-| **Gérer son compte** | Profil de l’entreprise (ICE, RC, représentant, RIB), sécurité, **suppression du compte et des données depuis l’application** |
-
-## Captures d’écran
-
-| Aujourd’hui | Marchés | Fiche d’un marché | Prix |
+| Aujourd’hui | Marchés | Fiche du marché | Estimation |
 |:-:|:-:|:-:|:-:|
-| <img src="docs/screenshots/aujourdhui.png" width="200" alt="Écran du jour : échéances à venir et dossiers en préparation"> | <img src="docs/screenshots/marches.png" width="200" alt="Liste des marchés avec recherche et filtres"> | <img src="docs/screenshots/fiche-marche.png" width="200" alt="Fiche d’un marché avec tampon d’échéance"> | <img src="docs/screenshots/prix.png" width="200" alt="Estimation du prix de référence"> |
+| <img src="docs/screenshots/aujourdhui.png" width="190" alt="Vue Aujourd’hui avec échéances et dossiers en cours"> | <img src="docs/screenshots/marches.png" width="190" alt="Liste des marchés, recherche et filtres"> | <img src="docs/screenshots/fiche-marche.png" width="190" alt="Fiche détaillée d’un marché public"> | <img src="docs/screenshots/prix.png" width="190" alt="Écran d’estimation des prix"> |
 
-| Rapport d’activité | Abonnement et quotas | Conformité | Mode sombre |
+| Analyse d’activité | Abonnement | Conformité | Mode sombre |
 |:-:|:-:|:-:|:-:|
-| <img src="docs/screenshots/rapport.png" width="200" alt="Rapport d’activité avec indicateurs"> | <img src="docs/screenshots/abonnement.png" width="200" alt="Consommation des quotas d’abonnement"> | <img src="docs/screenshots/conformite.png" width="200" alt="Score de conformité des attestations"> | <img src="docs/screenshots/fiche-marche-sombre.png" width="200" alt="Fiche d’un marché en mode sombre"> |
+| <img src="docs/screenshots/rapport.png" width="190" alt="Rapport d’activité et indicateurs"> | <img src="docs/screenshots/abonnement.png" width="190" alt="Suivi des quotas de l’abonnement"> | <img src="docs/screenshots/conformite.png" width="190" alt="Écran de suivi de conformité"> | <img src="docs/screenshots/fiche-marche-sombre.png" width="190" alt="Fiche de marché en mode sombre"> |
 
-## Design
+## Interface et expérience mobile
 
-- **Système de design maison** : couleurs, typographie et espacements définis une fois et utilisés partout, en mode clair et en mode sombre (pas une simple inversion : chaque couleur sombre est choisie et vérifiée).
-- **Typographie Public Sans**, conçue pour les services publics, avec des chiffres alignés pour les montants et les comptes à rebours.
-- **Conventions iOS et Android** : grands titres, listes groupées, tirer pour actualiser, chargements progressifs, action principale fixée en bas d’écran, retour haptique.
-- **Graphiques sans bibliothèque externe** : indicateurs, histogrammes interactifs (toucher une barre pour lire sa valeur, vue tableau disponible), barres classées, jauges. Les couleurs sont validées pour rester distinguables par les personnes daltoniennes.
-- **Accessibilité** : zones tactiles d’au moins 44 points, libellés pour les lecteurs d’écran, l’information n’est jamais portée par la couleur seule, respect du réglage « réduire les animations », texte qui s’adapte à la taille choisie par l’utilisateur.
-- **Textes pensés pour l’utilisateur** : messages d’erreur qui disent quoi faire, écrans vides qui proposent l’étape suivante, aucun jargon technique.
-
-## Comment l’application communique avec la plateforme
-
-L’application est un client natif : elle ne contient aucune logique métier sensible et n’embarque aucune donnée du client. Elle dialogue avec la plateforme au travers d’une **API REST privée** :
-
-- **JSON sur HTTPS**, authentification par **jeton**, stocké dans le trousseau sécurisé du téléphone (Keychain / Keystore) ;
-- **listes paginées** chargées au fil du défilement ;
-- **traitements longs asynchrones** (analyse de documents, estimations) suivis par interrogation régulière de leur état, avec barre de progression ;
-- **envoi de fichiers** (PDF, Word, Excel) depuis le sélecteur de documents du téléphone, et **téléchargement sécurisé** des pièces privées, ensuite partageables ;
-- **session expirée** détectée automatiquement, avec retour à l’écran de connexion ;
-- les données privées (coûts, marges, documents) ne sont pas conservées sur le téléphone au-delà de la session.
-
-Les traitements IA ne sont jamais déclenchés sans l’accord explicite de l’utilisateur, et leurs résultats sont présentés comme une aide à vérifier, jamais comme une vérité.
+- Thème clair et thème sombre, avec des couleurs et une typographie cohérentes dans l’application.
+- Navigation par onglets et écrans adaptés aux formats mobiles iOS et Android.
+- Présentation lisible des dates limites, statuts, montants et étapes de candidature.
+- États de chargement, listes actualisables et retours visuels pour accompagner les actions.
+- Sélection et partage de documents à l’aide des fonctions disponibles sur le téléphone.
+- Prise en charge des zones tactiles confortables, des lecteurs d’écran et des préférences de taille du texte.
 
 ## Technologies
 
-| | |
-|---|---|
-| Framework | **React Native** avec **Expo** (SDK 58), une seule base de code pour iOS et Android |
-| Langage | **TypeScript** en mode strict |
-| Navigation | **Expo Router** (navigation par fichiers, onglets, liens profonds) |
-| Données | **TanStack Query** (cache, rafraîchissement, pagination infinie), **Axios** |
-| Sécurité | **Expo SecureStore** pour le jeton de session |
-| Fonctions natives | Sélection et partage de fichiers, navigateur intégré, retour haptique, partage natif |
-| Qualité | ESLint, vérification de types, `expo-doctor` (20/20) |
-| Distribution | **EAS Build / Submit** : profils développement, test interne et production |
+- React Native et Expo pour les applications iOS et Android.
+- TypeScript pour les écrans et composants de l’application.
+- Expo Router pour la navigation.
+- TanStack Query et Axios pour les données affichées dans l’interface.
+- Expo SecureStore pour la session, ainsi que des modules Expo pour les documents, notifications, partage et retour haptique.
 
-## Organisation du code
+## Structure
 
-```
-app/                    Écrans (une route = un fichier)
-  (auth)/               Connexion, inscription
-  (tabs)/               Aujourd’hui, Marchés, Dossiers, Prix, Compte
-  market/[id]/          Fiche, analyse et prix d’un marché
-  application/[id].tsx  Dossier de candidature
-  features/[key].tsx    Fonctions secondaires (documents, calendrier, équipe…)
+```text
+app/                    Écrans et navigation
+  (auth)/               Connexion et inscription
+  (tabs)/               Aujourd’hui, marchés, candidatures, prix et compte
+  market/[id]/          Détails, analyse et estimation d’un marché
+  application/[id].tsx  Préparation d’une candidature
+  features/[key].tsx    Espaces et outils complémentaires
 src/
-  theme/                Système de design (couleurs clair/sombre, typographie, espacements)
-  components/           Composants d’interface, tampon d’échéance, graphiques
+  components/           Composants d’interface et graphiques
   screens/              Écrans de statistiques
-  api/                  Client HTTP, hooks de données, téléchargements
-  auth/                 Session et authentification
-  lib/                  Formatage (dates, montants, statuts), confirmations
-assets/                 Icône, écran de démarrage
-docs/screenshots/       Captures de ce document
+  theme/                Couleurs, typographie et espacements
+  api/                  Accès aux données utilisées par les écrans
+  auth/                 Écrans et état de session
+  lib/                  Formatage et interactions communes
+assets/                 Icônes, polices et éléments visuels
+docs/screenshots/       Captures d’écran présentées ci-dessus
 ```
 
-## Prête pour les stores
+## Démarrer l’application
 
-- Identifiants iOS / Android, icônes adaptatives et écran de démarrage clair et sombre
-- Manifeste de confidentialité iOS et permissions Android réduites au strict nécessaire
-- Suppression du compte depuis l’application (exigée par l’App Store et Google Play)
-- Profils de build et de publication EAS
-
-## Lancer le projet
-
-L’application a besoin d’un accès à l’API de la plateforme, qui est privée. Sans cet accès, l’écran de connexion s’affiche mais aucune donnée ne peut être chargée.
+Prérequis : Node.js et npm. L’application utilise les données du service auquel elle est connectée ; sans URL de service configurée et accès autorisé, les écrans nécessitant un compte ne peuvent pas afficher les données de l’espace.
 
 ```bash
 npm ci
-cp .env.example .env        # renseigner EXPO_PUBLIC_API_URL
-npx expo start              # puis scanner le QR code avec Expo Go
 ```
 
-Vérifications :
+Configurez l’URL du service dans `EXPO_PUBLIC_API_URL` selon votre environnement, puis lancez Expo :
 
 ```bash
-npm run typecheck
-npm run lint
-npx expo-doctor
+npm start
 ```
 
-## Licence
-
-Code publié à titre de démonstration (portfolio). **Tous droits réservés** : la consultation est libre, mais toute copie, modification ou réutilisation nécessite une autorisation écrite. Voir [LICENSE](LICENSE).
-
----
-
-Projet réalisé en freelance. Pour un projet similaire — application mobile, refonte d’interface ou produit SaaS —, contactez-moi via mon profil GitHub.
+Les commandes de développement disponibles sont `npm run typecheck`, `npm run lint` et `npm run web`.
